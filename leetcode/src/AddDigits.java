@@ -21,7 +21,7 @@ public class AddDigits {
         } while (total >= 10);
         return total;
     }
-    
+
     public int addDigitsRecursively(int num) {
         if (num < 10) {
             return num;
@@ -32,5 +32,13 @@ public class AddDigits {
             num /= 10;
         }
         return addDigitsRecursively(total);
+    }
+
+    public int lineAddDigits(int num) {
+        if (num == 0) {
+            return num;
+        }
+        num %= 9;
+        return num == 0 ? 9 : num;
     }
 }
