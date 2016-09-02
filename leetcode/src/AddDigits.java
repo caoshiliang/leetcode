@@ -21,4 +21,16 @@ public class AddDigits {
         } while (total >= 10);
         return total;
     }
+    
+    public int addDigitsRecursively(int num) {
+        if (num < 10) {
+            return num;
+        }
+        int total = 0;
+        while (num != 0) {
+            total += num % 10;
+            num /= 10;
+        }
+        return addDigitsRecursively(total);
+    }
 }
