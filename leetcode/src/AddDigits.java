@@ -1,6 +1,11 @@
 /**
  * https://leetcode.com/problems/add-digits/
  * @author silent
+ * 
+ * First time, I came up with the iterative solution.
+ * Second time, I found the recursive solution is of same thought line but codes are more clear
+ * I knew there's linear solution as I saw the hint, then I clicked the hint to see another: how many results in total.
+ * My answer is [0, 9], then I understood there's a pattern here. Then finally got the pattern after short calculating.
  */
 public class AddDigits {
     public static void main(String[] args) {
