@@ -1,3 +1,4 @@
+package easy;
 /**
  * https://leetcode.com/problems/add-digits/
  * @author silent

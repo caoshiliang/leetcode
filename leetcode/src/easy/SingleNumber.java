@@ -1,3 +1,4 @@
+package easy;
 /**
  * https://leetcode.com/problems/single-number/
  * @author silent

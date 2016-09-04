@@ -1,6 +1,6 @@
+package easy;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 /**
  * https://leetcode.com/problems/find-the-difference/
