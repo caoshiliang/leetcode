@@ -10,6 +10,9 @@ import org.junit.Test;
  * @author silent
  * Key points: Endlessly calcuating means there's a loop in it, which means
  * there's must be duplicate element if you record all intermediate numbers.
+ * Another thought: Most people could come up with the solution to use hashset
+ * But in some cases, time is not bottleneck, we want less space occupied, in which
+ * case, we could introduce Floyd Circle Detection (1 step, 2 steps, meet means circle)
  */
 public class HappyNumber {
     @Test
