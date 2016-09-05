@@ -5,6 +5,18 @@ package easy;
  *
  */
 public class PowerOf2 {
+    /**
+     * Smart way use n&(n-1)
+     * @param n
+     * @return
+     */
+    public boolean isPowerOf2(int n) {
+        if (n < 1) {
+            return false;
+        }
+        return (n & (n - 1)) == 0;
+    }
+
     public boolean isPowerOfTwo(int n) {
         if (n < 1) {
             return false;
