@@ -1,7 +1,5 @@
 package easy;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * https://leetcode.com/problems/integer-replacement/

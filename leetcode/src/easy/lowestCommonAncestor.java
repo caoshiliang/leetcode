@@ -12,7 +12,7 @@ import models.TreeNode;
  */
 public class lowestCommonAncestor {
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNode getLowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         while (root != null) {
             if (root.val > p.val && root.val > q.val) {
                 root = root.left;
