@@ -11,6 +11,11 @@ package DynamicProgramming;
  */
 public class LongestPalindromicSubstring {
     
+public static void main(String[] args) {
+    int a = 1;
+    System.out.println(Integer.toBinaryString(~1));
+    System.out.println(~a);
+}
 public String longestPalindrom(String s) {
         
         if (s == null || s.isEmpty()) {
