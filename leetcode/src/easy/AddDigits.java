@@ -16,16 +16,16 @@ public class AddDigits {
         if (num < 10) {
             return num;
         }
-        int total;
-        do {
-            total = 0;
+
+        while (num >= 10) {
+            int total = 0;
             while (num != 0) {
                 total += num % 10;
                 num /= 10;
             }
             num = total;
-        } while (total >= 10);
-        return total;
+        }
+        return num;
     }
 
     public int addDigitsRecursively(int num) {
