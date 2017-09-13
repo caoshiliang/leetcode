@@ -1,6 +1,13 @@
 package easy;
 
 /**
+ * 
+ * Revisit on 9/5/2017, quote "
+ * The Sieve of Eratosthenes is one of the most efficient ways to find all prime numbers up to n. 
+ * "
+ * 
+ * The method shown below is using this method
+ * 
  * https://leetcode.com/problems/count-primes/
  * @author caos1
  * Key Points: See hints under this problem

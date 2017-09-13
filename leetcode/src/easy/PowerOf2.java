@@ -1,5 +1,8 @@
 package easy;
 /**
+ * Revisited on 9/9/2017
+ * 
+ * 
  * https://leetcode.com/problems/power-of-two/
  * @author silent
  *

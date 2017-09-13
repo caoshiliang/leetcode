@@ -3,6 +3,13 @@ package easy;
 import org.junit.Test;
 
 /**
+ * 
+ * 
+ * Revisited on 9/9/2017
+ * 
+ * The key point is to find the programmatic feature that we could use to identify if the
+ * 2 rectangles have overlap or not.
+ * 
  * https://leetcode.com/problems/rectangle-area/
  * @author caos1
  * Key Points:

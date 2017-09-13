@@ -2,6 +2,9 @@ package easy;
 
 import models.ListNode;
 /**
+ * Revisited 0n 9/11/2017
+ * 
+ * 
  * https://leetcode.com/problems/remove-linked-list-elements/
  * @author caos1
  * Key Points:
@@ -25,5 +28,24 @@ public class RemoveLinkedListElements {
             p = p.next;
         }
         return newHead.next;
+    }
+
+    /**
+     * New added solution
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode another(ListNode head, int val) {
+        ListNode nHead = new ListNode(1);
+        for (ListNode p = head, next = null, prev = nHead; p != null; p = next) {
+            next = p.next;
+            if (p.val != val) {
+                prev.next = p;
+                prev = p;
+                prev.next = null;
+            }
+        }
+        return nHead.next;
     }
 }

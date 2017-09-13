@@ -1,6 +1,13 @@
 package easy;
 
 /**
+ * Revisit on 9/5/2017
+ * 
+ * Only the smartest solution can AC with limited space and time.
+ * 
+ * This question is not suitable for an interview
+ * 
+ * 
  * @author silent
  * Problem: https://leetcode.com/problems/nim-game/
  * Very interesting game.
@@ -14,4 +21,16 @@ public class NimGame {
     public boolean canWinNim(int n) {
         return n % 4 != 0;
     }
+    
+    public boolean canWinDP(int n) {
+        if (n < 4) {
+            return true;
+        }
+        boolean a = true, b = true, c = true;
+        for (int i = 4; i <= n; i ++) {
+            boolean d = !a || !b || !c;
+            a = b; b = c; c = d;
+        }
+        return c;
+    } 
 }

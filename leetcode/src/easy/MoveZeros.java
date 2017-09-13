@@ -2,6 +2,18 @@ package easy;
 import java.util.Arrays;
 
 /**
+ * Revisit on 9/5/2017
+ * 
+ * A common requirment when doing operations in memory is that:
+ * 
+ * In-place.
+ * 
+ * In this situation, make sure the place we overwrote is no longer used 
+ * (or has just been used for last time)
+ * 
+ * 
+ * What's more, minor change, move the self increacement to the same line of move element
+ * 
  * https://leetcode.com/problems/move-zeroes/
  * @author silent
  * Be cautious about this situation:
@@ -26,8 +38,7 @@ public class MoveZeros {
             if (nums[i] == 0) {
                 continue;
             }
-            nums[index] = nums[i];
-            index ++;
+            nums[index ++] = nums[i];
         }
         for (int i = index ; i < nums.length; i ++) {
             nums[i] = 0;

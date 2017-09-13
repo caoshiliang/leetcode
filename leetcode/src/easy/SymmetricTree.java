@@ -3,6 +3,11 @@ package easy;
 import models.TreeNode;
 
 /**
+ * Revisit on 9/11/2017
+ * 
+ * The key point is to set down the recursive format first
+ * 
+ * 
  * https://leetcode.com/problems/symmetric-tree/
  * @author silent
  * Key Points:

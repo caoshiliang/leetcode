@@ -1,5 +1,7 @@
 package remember;
 /**
+ * Revisited on 9/13/2017
+ * 
  * https://leetcode.com/problems/majority-element/
  * @author silent
  *

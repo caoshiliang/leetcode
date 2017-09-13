@@ -2,28 +2,39 @@ package easy;
 
 import java.util.Stack;
 
-class MyQueue {
-    Stack<Integer> s1 = new Stack<>();
-    Stack<Integer> s2 = new Stack<>();
+/**
+ * Revisit on 9/5/2017
+ * 
+ * 
+ * 
+ * Modify the interface of pop, make it return value;
+ * Using generic
+ * 
+ * A queue implemented using 2 stack, not a leetcode question
+ * @author caos1
+ *
+ */
+class MyQueue<T> {
+    Stack<T> s1 = new Stack<>();
+    Stack<T> s2 = new Stack<>();
     // Push element x to the back of queue.
-    public void push(int x) {
+    public void push(T x) {
         s1.push(x);
     }
 
     // Removes the element from in front of queue.
-    public void pop() {
+    public T pop() {
         if (!s2.isEmpty()) {
-            s2.pop();
-            return;
+            return s2.pop();
         }
         while(!s1.isEmpty()) {
             s2.push(s1.pop());
         }
-        s2.pop();
+        return s2.pop();
     }
 
     // Get the front element.
-    public int peek() {
+    public T peek() {
         if (!s2.isEmpty()) {
             return s2.peek();
         }

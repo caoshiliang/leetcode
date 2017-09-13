@@ -4,7 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * https://leetcode.com/articles/valid-anagram/
+ * Revisit on 9/11/2017
+ * 
+ * 
+ * https://leetcode.com/problems/valid-anagram/
  * @author silent
  *
  */
@@ -22,21 +25,17 @@ public class ValidAnagram {
         Map<Character, Integer> m = new HashMap<>();
         for (int i = 0; i < s.length(); i ++) {
             char c = s.charAt(i);
-            if (!m.containsKey(c)) {
-                m.put(c, 0);
-            }
-            m.put(c, m.get(c) + 1);
+            m.put(c, m.getOrDefault(c, 0) + 1);
         }
         for (int i = 0; i < t.length(); i ++) {
             char c = t.charAt(i);
             if (!m.containsKey(c)) {
                 return false;
             }
-            int left = m.get(c);
-            if (left == 1) {
+            if (m.get(c) == 1) {
                 m.remove(c);
             } else {
-                m.put(c, left - 1);
+                m.put(c, m.get(c) - 1);
             }
         }
         return m.isEmpty();

@@ -3,6 +3,11 @@ package pickone;
 import org.junit.Test;
 
 /**
+ * Revisited on 9/13/2017
+ * 
+ * Remember to abstract and simplify the process, find the pattern, and use it to find the last element
+ * 
+ * 
  * https://leetcode.com/problems/elimination-game/
  * @author silent
  * Main Thought:

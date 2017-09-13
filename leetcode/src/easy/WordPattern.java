@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Revisited on 9/11/2017
+ * Keep 2 hashmap instances to check the 1-to-1 map's uniqueness
+ * 
+ * 
  * https://leetcode.com/problems/word-pattern/
  * @author caos1
  * Key Points:

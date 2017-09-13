@@ -2,6 +2,9 @@ package easy;
 
 import org.junit.Test;
 /**
+ * Revisited on 9/11/2017
+ * 
+ * 
  * https://leetcode.com/problems/rotate-function/
  * @author silent
  * Key Points:
@@ -20,7 +23,7 @@ public class RotateFunction {
         int base = 0;
         int sum = 0;
         for (int i = 0; i < A.length; i ++) {
-            base += i * A[i];
+            base += i * A[i]; 
             sum += A[i];
         }
         int max = base;
@@ -33,4 +36,24 @@ public class RotateFunction {
         return max;
     }
 
+    
+    /**
+     * Time Exceeded using the direct way
+     * @param A
+     * @return
+     */
+    public int another(int[] A) {
+        int len = A.length;
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < len; i ++) { // consider i as the rotation scale
+            int current = 0;
+            for (int j = 0; j < len; j ++) { // j is used to accumulate the sum
+                current += j * A[(i + j) % len];
+            }
+            if (current > max) {
+                max = current;
+            }
+        }
+        return max;
+    }
 }

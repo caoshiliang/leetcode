@@ -3,6 +3,8 @@ package easy;
 import models.ListNode;
 
 /**
+ * Revisited on 9/9/2017, add another solution, same process using 2 pointers
+ * 
  * https://leetcode.com/problems/palindrome-linked-list/
  * @author caos1
  * Key Points: 
@@ -47,6 +49,39 @@ public class PalindromeLinkedList {
             p = p.next;
             q = q.next;
         }
+        return true;
+    }
+
+    /**
+     * Key points:
+     * - 2 pointers could divide this linked list on 1 iteration
+     * - Using head-insert to reverse the end half
+     * - Compare the linked list to see if it's a palindrome string.
+     */
+    public boolean anotherSolution(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode p = new ListNode(1);
+
+        while (slow != null) {
+            ListNode tmp = slow.next;
+            slow.next = p.next;
+            p.next = slow;
+            slow = tmp;
+        }
+        p = p.next;
+        while (head != null && p != null) {
+            if (head.val != p.val) {
+                return false;
+            }
+            head = head.next;
+            p = p.next;
+        }
+
         return true;
     }
 }

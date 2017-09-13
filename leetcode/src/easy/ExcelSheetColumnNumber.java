@@ -1,5 +1,8 @@
 package easy;
 /**
+ * Revisited on 9/5/2017: essentially, this is a conversion problem between
+ * 26-scale number to decimal number.
+ * 
  * https://leetcode.com/problems/excel-sheet-column-number/
  * @author silent
  * 26-scale to decimal number

@@ -45,7 +45,7 @@ public class StringToInteger {
             int prev = sum;
             sum *= 10;
             sum += bit - '0';
-            if (sum < 0 || (sum - (bit - '0')) / 10 != prev) {
+            if (sum < 0 || (sum - (bit - '0')) / 10 != prev) { //overflow case
                 if (signal == 1) {
                     return Integer.MAX_VALUE;
                 } else {

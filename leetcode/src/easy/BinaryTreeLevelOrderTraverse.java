@@ -7,6 +7,10 @@ import java.util.Queue;
 
 import models.TreeNode;
 /**
+ * Revisit on 9/4/2017: because the dequeue operation happens mixed with enqueue opertion of next layer
+ * So Must know the count of current layer nodes, which should have been recorded when enqueueing nodes
+ * of this layer
+ * 
  * https://leetcode.com/problems/binary-tree-level-order-traversal/
  * @author silent
  * Key Points:

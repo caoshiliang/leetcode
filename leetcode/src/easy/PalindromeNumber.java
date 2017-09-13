@@ -3,6 +3,9 @@ package easy;
 import org.junit.Test;
 
 /**
+ * Revisited on 9/9/2017, this has been the simplest solution
+ * 
+ * 
  * https://leetcode.com/problems/palindrome-number/
  * @author silent
  * Key Points:

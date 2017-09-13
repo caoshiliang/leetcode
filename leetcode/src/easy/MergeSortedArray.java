@@ -5,6 +5,15 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
+ * Revisit on 9/5/2017
+ * 
+ * This nums1 is longer enough, and the space in the back is empty, so we consider using this space
+ * Moving principle: Biggest element go very right
+ * Then, left elements will also copied to left space
+ * 
+ * NOTE: if left elements are from nums1, don't need to copy, they're already there
+ * 
+ * 
  * https://leetcode.com/problems/merge-sorted-array/
  * @author caos1
  * Key Points:

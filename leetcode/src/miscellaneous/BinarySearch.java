@@ -2,6 +2,11 @@ package miscellaneous;
 
 import org.junit.Test;
 
+/**
+ * Visited on 9/13/2017
+ * @author caos1
+ *
+ */
 public class BinarySearch {
     @Test
     public void abc() {

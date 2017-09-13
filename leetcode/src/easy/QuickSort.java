@@ -1,7 +1,11 @@
 package easy;
 import java.util.Arrays;
 
-
+/**
+ * Revisited on 9/9/2017
+ * @author caos1
+ *
+ */
 public class QuickSort {
     public static void main(String[] args) {
         int[] a = {9, 10, 2,3,1,3,4,5,-1};

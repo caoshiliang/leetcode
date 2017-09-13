@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 
+ * Revisit on 9/5/2017
+ * 
+ * Understand the harmonious subsequence can only contain 2 elements
+ * so find the 2 elements, who appears most frequently.
+ * 
  * https://leetcode.com/problems/longest-harmonious-subsequence/description/
  * 
  * @author caos1

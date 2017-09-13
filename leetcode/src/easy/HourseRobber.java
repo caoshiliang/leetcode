@@ -1,5 +1,7 @@
 package easy;
 /**
+ * Revisited on 9/5/2017, rewrote the method, key points are good
+ * 
  * https://leetcode.com/problems/house-robber/
  * @author silent
  * Key Points:
@@ -14,22 +16,19 @@ public class HourseRobber {
     public int rob(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
-        }
-        if (nums.length == 1) {
+        } else if (nums.length == 1) {
             return nums[0];
-        }
-        if (nums.length == 2) {
+        } else if (nums.length == 2) {
             return nums[0] > nums[1] ? nums[0] : nums[1];
         }
         int p = nums[0];
-        int q = nums[0] > nums[1] ? nums[0] : nums[1];
+        int q = p > nums[1] ? p : nums[1];
         for (int i = 2; i < nums.length; i ++) {
             int tmp = p + nums[i];
-            p = q;
+            p = q; // moving forward
             if (tmp > q) {
                 q = tmp;
             }
-            
         }
         return q;
     }

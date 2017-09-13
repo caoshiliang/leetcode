@@ -3,11 +3,13 @@ package easy;
 import java.util.HashMap;
 import java.util.Map;
 /**
+ * Revisit on 9/11/2017
+ * 
+ * 
  * https://leetcode.com/problems/two-sum/
  * @author caos1
  * Key Points:
  *     1. Use Map;
- *     2. Be cautious with duplicate elements (can form target or not)
  */
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {

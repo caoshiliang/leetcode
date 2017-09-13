@@ -5,6 +5,20 @@ import java.util.List;
 
 import org.junit.Test;
 /**
+ * Revisited on 9/13/2017
+ * 
+ * The key point is find the recursive pattern
+ * 
+ * When doing a repeated thing, it's quite important to find the pattern,
+ * among which the recursive pattern is a thing that we can use
+ * More important thing is: we have to find the condition to end the recursive invocation
+ * if we're using recursive pattern.
+ * 
+ * And we should consider if the intermediate result could be reused so to avoid redundant
+ * computation (Reasonably, a recursive solution that reuses some kind of intermediate result
+ * could be modified to a DP solution)
+ * 
+ * 
  * https://leetcode.com/problems/lexicographical-numbers/
  * @author caos1
  * Key Points:

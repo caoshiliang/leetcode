@@ -3,6 +3,8 @@ package easy;
 import models.ListNode;
 
 /**
+ * Revisited on 9/5/2017, quite classic, first asked when interviewed in MSCI.
+ * 
  * https://leetcode.com/problems/intersection-of-two-linked-lists/
  * @author caos1
  * Key Points:

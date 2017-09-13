@@ -1,5 +1,8 @@
 package easy;
 /**
+ * Revisit on 9/11/2017
+ * 
+ * 
  * https://leetcode.com/problems/ugly-number/
  * @author silent
  * Key points:

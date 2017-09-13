@@ -3,6 +3,15 @@ package easy;
 import models.TreeNode;
 
 /**
+ * Revisit on 9/5/2017
+ * 
+ * BST's important feature:
+ *  smaller values on left, and bigger values on right
+ *  so if a node whose value is smaller than one and bigger than the other,
+ *  that's the common ancestor of these two nodes.
+ * 
+ * 
+ * 
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  * 
  * @author silent

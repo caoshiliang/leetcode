@@ -33,5 +33,31 @@ public class RemoveNthNodeFromEndOfList {
         q.next = q.next.next;
         return head;
     }
+
+
+    /**
+     * New solution:
+     * - Find (n + 1)-th element, and remove its next element
+     * - Consider special cases:
+     *   : Delete the last one (common logic could cover)
+     *   : Delete the first one
+     */
+    public ListNode another(ListNode head, int n) {
+        ListNode p = head;
+        for (int i = 0; i < n; i ++) {
+            p = p.next;
+        }
+        if (p == null) { // special case: remove the first
+            return head.next;
+        }
+        p = p.next;
+        ListNode trail = head;
+        while (p != null) {
+            trail = trail.next;
+            p = p.next;
+        }
+        trail.next = trail.next.next;
+        return head;
+    }
 }
  

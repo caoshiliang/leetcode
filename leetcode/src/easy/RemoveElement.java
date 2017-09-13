@@ -1,5 +1,10 @@
 package easy;
 /**
+ * Revisit on 9/11/2017
+ * 
+ * Simplify the solution, remove useless lines
+ * 
+ * 
  * https://leetcode.com/problems/remove-element/
  * @author silent
  * Key Points:
@@ -12,11 +17,9 @@ public class RemoveElement {
         }
         int index = 0;
         for (int i = 0; i < nums.length; i ++) {
-            if (nums[i] == val) {
-                continue;
+            if (nums[i] != val) {
+                nums[index ++] = nums[i];
             }
-            nums[index] = nums[i];
-            index ++;
         }
         return index;
     }

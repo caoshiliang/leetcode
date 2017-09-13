@@ -1,5 +1,9 @@
 package remember;
 /**
+ * Revisited on 9/13/2017, the point is to decide wheather to add or to minus
+ * when encountered a I/X/C
+ * 
+ * 
  * https://leetcode.com/problems/roman-to-integer/
  * @author silent
  * I : 1

@@ -1,5 +1,7 @@
 package easy;
 /**
+ * Visit on 9/11/2017 Old question
+ * 
  * https://leetcode.com/problems/single-number/
  * @author silent
  * Quite old question, use XOR

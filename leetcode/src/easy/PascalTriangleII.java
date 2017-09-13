@@ -7,6 +7,13 @@ import java.util.List;
 import org.junit.Test;
 
 /**
+ * Revisit on 9/9/2017
+ * 
+ * Remember the optimizing points:
+ * - Could use one array;
+ * - For one row, could compute half because the elements in row is symmetrical
+ * 
+ * 
  * https://leetcode.com/problems/pascals-triangle-ii/
  * @author silent
  * Key Points:

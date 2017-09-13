@@ -8,6 +8,11 @@ import org.junit.Test;
 
 import models.TreeNode;
 /**
+ * Revisit on 9/4/2017, add one more solution, which add paths when going down
+ * 
+ * Modify previous solution: delete useless codes
+ * 
+ * 
  * https://leetcode.com/problems/binary-tree-paths/
  * @author caos1
  * Key Points:
@@ -21,7 +26,7 @@ public class BinaryTreePaths {
         TreeNode n3 = new TreeNode(3);
         n1.left = n2;
         n2.right = n3;
-        List<String> result = binaryTreePaths(n1);
+        List<String> result = anotherMethod(n1);
         for (String s : result) {
             System.out.println(s);
         }
@@ -34,14 +39,6 @@ public class BinaryTreePaths {
         if (root.left == null && root.right == null) {
             return new LinkedList<String>(Arrays.asList(String.valueOf(root.val)));
         }
-        if (root.left == null || root.right == null) {
-            TreeNode next = root.left == null ? root.right : root.left;
-            List<String> child = binaryTreePaths(next);
-            List<String> result = new LinkedList<String>();
-            for (String s : child) {
-                result.add(String.valueOf(root.val) + "->" + s);
-            }
-        }
         List<String> left = binaryTreePaths(root.left);
         List<String> right = binaryTreePaths(root.right);
         right.addAll(left);
@@ -50,5 +47,28 @@ public class BinaryTreePaths {
             result.add(String.valueOf(root.val) + "->" + s);
         }
         return result;
+    }
+
+    public List<String> anotherMethod(TreeNode root) {
+        List<String> result = new LinkedList<String>();
+        binaryTreePaths(root, "", result);
+        return result;
+    }
+
+    public void binaryTreePaths(TreeNode root, String currentPath, List<String> result) {
+        if (root == null) {
+            return;
+        }
+        String addRootPath = currentPath.isEmpty() ? "" + root.val : currentPath + "->" + root.val;
+        if (root.left == null && root.right == null) {
+            result.add(addRootPath);
+            return;
+        }
+        if (root.left != null) {
+            binaryTreePaths(root.left, addRootPath, result);
+        }
+        if (root.right != null) {
+            binaryTreePaths(root.right, addRootPath, result);
+        }
     }
 }

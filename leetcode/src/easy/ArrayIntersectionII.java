@@ -15,10 +15,7 @@ public class ArrayIntersectionII {
         }
         Map<Integer, Integer> m = new HashMap<>();
         for (int num : nums1) {
-            if (!m.containsKey(num)) {
-                m.put(num, 0);
-            }
-            m.put(num, m.get(num) + 1);
+            m.put(num, m.getOrDefault(num, 0) + 1);
         }
         List<Integer> result = new ArrayList<>();
         for (int num : nums2) {

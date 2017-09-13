@@ -3,6 +3,10 @@ package easy;
 import models.ListNode;
 
 /**
+ * Revisit on 9/5/2017
+ * 
+ * NOTE: the defect is this method can't delete last node of the link list.
+ * 
  * https://leetcode.com/problems/delete-node-in-a-linked-list/
  * @author silent
  * Solution: copy next element's value to this one, delete next element

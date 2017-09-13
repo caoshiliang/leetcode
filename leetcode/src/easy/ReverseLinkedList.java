@@ -2,6 +2,14 @@ package easy;
 
 import models.ListNode;
 /**
+ * Revisit on 9/11/2017, Traditional way of reverse a linked list
+ * 
+ * Maintain a new linked list (null at beginning), then take first element of current
+ * linked list and append it to the head of the new one. Finally, remember to append last
+ * element, as in the loop the last has no chance to be appended.
+ * 
+ * 
+ * 
  * https://leetcode.com/problems/reverse-linked-list/
  * @author silent
  */
@@ -11,17 +19,17 @@ public class ReverseLinkedList {
         if (node == null || node.next == null) {
             return node;
         }
-        ListNode tmp = null;
+        ListNode trail = null; // hold head of new linked list
         ListNode p = node;
         ListNode q = node.next;
         while (q != null) {
-            p.next = tmp;
-            tmp = p;
+            p.next = trail;
+            trail = p;
             p = q;
             q = q.next;
         }
         // till now, p points to the last element but not linked to the reversed link without it
-        p.next = tmp;
+        p.next = trail;
         return p;
     }
     /*

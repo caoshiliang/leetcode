@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Revisited on 9/4/2017, wonderful and simple solution!
+ * 
  * https://leetcode.com/problems/contains-duplicate-ii/
  * @author caos1
  * Key Points:
@@ -18,7 +20,7 @@ public class ContainsDuplicateII {
         Set<Integer> s = new HashSet<Integer>();
         for (int i = 0; i < nums.length; i ++) {
             if (i > k) {
-                s.remove(nums[i - k -1]);
+                s.remove(nums[i - k - 1]);
             }
             if (s.contains(nums[i])) {
                 return true;

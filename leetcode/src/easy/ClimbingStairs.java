@@ -6,7 +6,9 @@ package easy;
  * 1) Most simple: use recursive way;
  * 2) Simple: use array, treat as DP;
  * 3) Use iterative way withoutout array, only use 2 variables *
- * 4) There is a formula to calculate 
+ * 4) There is a formula to calculate : log(n) time coplexity
+ * 
+ * 4) solution: https://leetcode.com/problems/climbing-stairs/solution/
  */
 public class ClimbingStairs {
 

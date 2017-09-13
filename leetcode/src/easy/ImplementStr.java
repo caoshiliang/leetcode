@@ -1,9 +1,11 @@
 package easy;
 /**
+ * Revisited on 9/5/2017, NOTE: compare head, then compare body with Java API is easier
+ * 
  * https://leetcode.com/problems/implement-strstr/
  * @author caos1
  * Key Points:
- *     1. Compare fiest char to decide if need to compare whole string
+ *     1. Compare first char to decide if need to compare whole string
  *     2. Pay attention boundary checking codes in the beginning: haystack is shorter, needle is empty
  *     how to decide the end of loop (i)
  */

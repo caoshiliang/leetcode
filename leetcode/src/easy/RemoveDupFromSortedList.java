@@ -3,6 +3,12 @@ package easy;
 import models.ListNode;
 
 /**
+ * Revisit on 9/11/2017
+ * 
+ * Key points: check the boundary condition carefully, to make it cover all case
+ * and as simple as possible.
+ * 
+ * 
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
  * @author silent
  * Key points:
@@ -26,6 +32,27 @@ public class RemoveDupFromSortedList {
             }
             p = p.next;
             q = q.next;
+        }
+        return head;
+    }
+
+    /**
+     * New added solution with less lines and clearer logic
+     * @param head
+     * @return
+     */
+    public ListNode another(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode p = head;
+        while (p != null) {
+            ListNode q = p.next;
+            while (q != null && q.val == p.val) {
+                q = q.next;
+            }
+            p.next = q;
+            p = q;
         }
         return head;
     }

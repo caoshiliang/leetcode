@@ -1,6 +1,9 @@
 package easy;
 
 /**
+ * Revisited on 9/5/2017, XOR then compute numbers or 1.
+ * 
+ * 
  * https://leetcode.com/problems/hamming-distance/description/
  * @author caos1
  *

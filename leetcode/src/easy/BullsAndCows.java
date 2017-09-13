@@ -5,6 +5,9 @@ import java.util.Map;
 
 import org.junit.Test;
 /**
+ * Revisit on 9/4/2017, bulls are kind of cows
+ * record bulls separately, and calculate all cows, finally remove mixed bulls.
+ * 
  * https://leetcode.com/problems/bulls-and-cows/
  * @author caos1
  * Key Points:

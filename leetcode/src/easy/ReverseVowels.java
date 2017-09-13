@@ -7,6 +7,8 @@ import java.util.Set;
 import org.junit.Test;
 
 /**
+ * Revisit on 9/11/2017
+ * 
  * https://leetcode.com/problems/reverse-vowels-of-a-string/
  * 
  * @author silent
@@ -28,6 +30,7 @@ public class ReverseVowels {
         int low = 0;
         int high = builder.length() - 1;
         while (low < high) {
+            // Remember to check the boundary
             while (!isVowel(builder.charAt(low)) && low < high) {
                 low ++;
             }
@@ -40,8 +43,31 @@ public class ReverseVowels {
             char tmp = builder.charAt(low);
             builder.setCharAt(low, builder.charAt(high));
             builder.setCharAt(high, tmp);
+            
+            // REMEMBER to increase the counter
             low ++;
             high --;
+        }
+        return builder.toString();
+    }
+
+    public String another(String s) {
+        StringBuilder builder = new StringBuilder(s);
+        int low = 0, high = builder.length() - 1;
+        while (low < high) {
+            while(!isVowel(builder.charAt(low))) {
+                low ++;
+            }
+            while(!isVowel(builder.charAt(high))) {
+                high --;
+            }
+            if (low < high) {
+                char tmp = builder.charAt(low);
+                builder.setCharAt(low, builder.charAt(high));
+                builder.setCharAt(high, tmp);
+                low ++;
+                high --;
+            }
         }
         return builder.toString();
     }

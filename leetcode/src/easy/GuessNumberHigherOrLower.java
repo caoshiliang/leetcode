@@ -3,6 +3,9 @@ package easy;
 import org.junit.Test;
 
 /**
+ * Revisit on 9/5/2017, Be cautious with the overflow trap
+ * 
+ * 
  * https://leetcode.com/problems/guess-number-higher-or-lower/
  * @author caos1
  * Key Points:

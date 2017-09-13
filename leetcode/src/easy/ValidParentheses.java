@@ -4,6 +4,12 @@ import java.util.Stack;
 
 import org.junit.Test;
 
+/**
+ * Revisit on 9/11/2017
+ * https://leetcode.com/problems/valid-parentheses/description/
+ * @author caos1
+ *
+ */
 public class ValidParentheses {
     @Test
     public void abc() {

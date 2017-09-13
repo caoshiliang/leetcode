@@ -2,6 +2,9 @@ package easy;
 
 import models.TreeNode;
 /**
+ * Revisit on 9/9/2017, add a new solution
+ * 
+ * 
  * https://leetcode.com/problems/path-sum/
  * @author silent
  * Key Points:
@@ -28,4 +31,25 @@ public class PathSum {
         return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
     }
 
+
+    /**
+     * A new solution of same design, but more simple
+     * @param root
+     * @param sum
+     * @return
+     */
+    public boolean another(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+        return recursive(root, sum, 0);
+    }
+    
+    public boolean recursive(TreeNode root, int sum, int acc) {
+        if (root.left == null && root.right == null) {
+            return acc + root.val == sum;
+        }
+        return (root.left != null && recursive(root.left, sum, acc + root.val))
+                || (root.right != null && recursive(root.right, sum, acc + root.val));
+    }
 }

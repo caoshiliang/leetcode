@@ -2,15 +2,20 @@ package interviews;
 
 public class TwoDimensionBinarySearch {
 
-    public static void main(String[] args) {
-        Position p = new TwoDimensionBinarySearch().search(new int[][]{{1,2,3},
-                                               {4,5,6},
-                                               {7,8,9}}, 8);
-        System.out.println(p.x);
-        System.out.println(p.y);
-//        System.out.println(new TwoDimensionBinarySearch().binarySearch(new int[] {1,2,3,4,5,8}, 7, 0, 5));
-    }
 
+    /**
+     * This is a question raised by JianZhiOffer
+     * 
+     * The solution is to search from the right top element:
+     * 1. If the value is equal with current element, return;
+     * 2. If the value is higher, then the current line is passed, row number ++, loop
+     * 3. If the value is smaller, then the current col is pased, col number --, loop
+     * 
+     * 4. If the value is not found, return false position
+     * @param array
+     * @param a
+     * @return
+     */
     public Position search(int[][] array, int a) {
 
         int i = 0;

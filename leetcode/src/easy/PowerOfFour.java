@@ -1,5 +1,7 @@
 package easy;
 /**
+ * Revisit on 9/9/2017
+ * 
  * https://leetcode.com/problems/power-of-four/
  * @author silent
  * Soutions:

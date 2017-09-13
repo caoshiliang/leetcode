@@ -16,4 +16,5 @@ public class KthSmallestElementInaSortedMatrix {
         Arrays.sort(a);
         return a[k - 1];
     }
+
 }

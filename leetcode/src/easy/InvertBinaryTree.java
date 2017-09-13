@@ -2,6 +2,8 @@ package easy;
 import models.TreeNode;
 
 /**
+ * Revisited on 9/5/2017, classic interview question, no need more words
+ * 
  * https://leetcode.com/problems/invert-binary-tree/
  * @author silent
  *

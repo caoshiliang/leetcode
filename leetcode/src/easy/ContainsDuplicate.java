@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Revisited on 9/4/2017, so easy
+ * 
  * https://leetcode.com/problems/contains-duplicate/
  * @author caos1
  * Key Points: use set

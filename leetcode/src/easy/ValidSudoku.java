@@ -4,6 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Revisit on 9/11/2017
+ * 
+ * The only rule is not to contain the same in a row/column/squre
+ * 
  * https://leetcode.com/problems/valid-sudoku/
  * @author caos1
  * Key Points:

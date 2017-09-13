@@ -7,6 +7,8 @@ import java.util.Queue;
 
 import models.TreeNode;
 /**
+ * Revisited on 9/4/2017, no big difference with common level-order traversal, just insert next layer's
+ * nodes in front position
  * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
  * @author silent
  * Key Points:

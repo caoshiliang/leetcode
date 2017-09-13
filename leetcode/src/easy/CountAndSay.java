@@ -2,6 +2,8 @@ package easy;
 
 import org.junit.Test;
 /**
+ * Revisited on 9/4/2017
+ * 
  * https://leetcode.com/problems/count-and-say/
  * @author caos1
  * Key Points:

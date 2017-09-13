@@ -2,6 +2,9 @@ package easy;
 
 import models.ListNode;
 /**
+ * Revisit on 9/5/2017, classic one, no more words
+ * 
+ * 
  * https://leetcode.com/problems/merge-two-sorted-lists/
  * @author silent
  * Key points;

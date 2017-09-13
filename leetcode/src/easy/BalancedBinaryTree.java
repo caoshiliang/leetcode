@@ -3,12 +3,14 @@ package easy;
 import models.TreeNode;
 
 /**
+ * 
+ * Revisited on 9/4/2017
  * https://leetcode.com/problems/balanced-binary-tree/
  * @author silent
  * Key Points:
  *     1. Need to compare left length and right length, judge left tree's balance, right tree's
  *     but calculations have overlap, need to avoid that.
- *     2. Find a viable recursive format, calcuate length, and during calculating, marke isBalanced
+ *     2. Find a viable recursive format, calculate length, and during calculating, mark isBalanced
  *     as false if left and right is not balanced.
  */
 public class BalancedBinaryTree {

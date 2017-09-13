@@ -2,9 +2,15 @@ package easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * Revisit on 9/9/2017
+ * 
+ * Add another solution
+ * 
+ * 
  * https://leetcode.com/problems/pascals-triangle/
  * @author silent
  * Key points:
@@ -33,5 +39,43 @@ public class PascalTriangle {
             arr.add(new ArrayList<Integer>(Arrays.asList(result[i])));
         }
         return arr;
+    }
+
+
+    /**
+     * Another solution:
+     * 
+     * 
+     * Use a tmp array for current row storing (and for next row computing);
+     * 
+     * When computing current row based on above row, remember the direction:
+     * Since we store computing result in array, and we computing depending on previous value
+     * This requires us to compute from back to front, so to avoid original value that should
+     * be used to compute is overrided.
+     * 
+     * 
+     * @param numRows
+     * @return
+     */
+    public List<List<Integer>> anotherSolution(int numRows) {
+        List<List<Integer>> result = new LinkedList<>();
+        if (numRows == 0) {
+            return result;
+        }
+        int[] tmp = new int[numRows];
+        tmp[0] = 1;
+        for (int i = 0; i < numRows; i ++) {
+            List<Integer> current = new LinkedList<>();
+            for (int j = i; j >= 0; j --) {
+                if (j == 0) {
+                    current.add(0, 1);
+                    continue;
+                }
+                tmp[j] += tmp[j - 1];
+                current.add(0, tmp[j]);
+            }
+            result.add(current);
+        }
+        return result;
     }
 }

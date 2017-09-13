@@ -6,10 +6,13 @@ import java.util.List;
 import java.util.Set;
 
 /**
+ * Revisited on 9/13/2017, The repeated strings could have overlap
+ * 
+ * 
  * https://leetcode.com/problems/repeated-dna-sequences/
  * @author caos1
  * Key Points:
- *     1. User set to detect repeat
+ *     1. Use set to detect repeat
  */
 public class RepeatedDNASequences {
     public List<String> findRepeatedDnaSequences(String s) {
